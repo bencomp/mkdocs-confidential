@@ -2,16 +2,16 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='mkdocs-your-plugin',
+    name='mkdocs-confidential',
     version='0.1.0',
-    description='A MkDocs plugin',
+    description='A MkDocs plugin that skips confidential files',
     long_description='',
     keywords='mkdocs',
     url='',
-    author='Your Name',
-    author_email='your email',
+    author='Ben Companjen',
+    author_email='ben@companjen.name',
     license='MIT',
-    python_requires='>=2.7',
+    python_requires='>=3.7',
     install_requires=[
         'mkdocs>=1.0.4'
     ],
@@ -30,7 +30,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'mkdocs.plugins': [
-            'your-plugin = mkdocs_your_plugin.plugin:YourPlugin'
+            'confidential = mkdocs_confidential.plugin:ConfidentialPlugin'
         ]
     }
 )
