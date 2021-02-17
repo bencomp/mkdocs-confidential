@@ -3,11 +3,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='mkdocs-confidential',
-    version='0.1.0',
+    version='0.2.0',
     description='A MkDocs plugin that skips confidential files',
     long_description='',
     keywords='mkdocs',
-    url='',
+    url='https://github.com/bencomp/mkdocs-confidential',
     author='Ben Companjen',
     author_email='ben@companjen.name',
     license='MIT',

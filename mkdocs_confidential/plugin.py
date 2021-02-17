@@ -13,7 +13,7 @@ log = logging.getLogger('mkdocs')
 class ConfidentialPlugin(BasePlugin):
 
     config_scheme = (
-        ('param', config_options.Type(str, default='')),
+        ('default_classification', config_options.Type(str, default='unclassified')),
     )
 
     def __init__(self):
@@ -61,7 +61,7 @@ class ConfidentialPlugin(BasePlugin):
         with open(page.file.abs_src_path) as f:
             contents = f.read()
             if contents[:3] != "---":
-                contents = "---\n---\n" + contents
+                contents = "---\nclassified: {}\n---\n\n".format(self.config['default_classification']) + contents
         return contents
 
     def on_page_markdown(self, markdown, page, config, files):
